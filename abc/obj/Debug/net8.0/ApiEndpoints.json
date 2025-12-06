@@ -1,0 +1,38 @@
+[
+  {
+    "ContainingType": "abc.Controllers.ScreeningController",
+    "Method": "GetAll",
+    "RelativePath": "Screening",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[abc.Entities.Screening, abc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "abc.Controllers.ScreeningController",
+    "Method": "AddRandomData",
+    "RelativePath": "Screening/add-random-data/{screeningCount}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "screeningCount",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

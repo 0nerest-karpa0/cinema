@@ -1,0 +1,111 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "abc",
+    "version": "1.0"
+  },
+  "paths": {
+    "/Screening": {
+      "get": {
+        "tags": [
+          "Screening"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Screening"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Screening"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Screening"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Screening/add-random-data/{screeningCount}": {
+      "post": {
+        "tags": [
+          "Screening"
+        ],
+        "parameters": [
+          {
+            "name": "screeningCount",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Screening": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "hallName": {
+            "type": "string",
+            "nullable": true
+          },
+          "screeningTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "ticketPrice": {
+            "type": "number",
+            "format": "float"
+          },
+          "format": {
+            "type": "string",
+            "nullable": true
+          },
+          "hasSubtitles": {
+            "type": "boolean"
+          },
+          "language": {
+            "type": "string",
+            "nullable": true
+          },
+          "movieId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
