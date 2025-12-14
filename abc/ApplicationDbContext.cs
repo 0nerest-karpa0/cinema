@@ -7,7 +7,12 @@ namespace abc
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options):base(options) { }
 
-        public DbSet<Screening> screenings { get; set; }
-        public DbSet<Movie> movies { get; set; }
+        public DbSet<Screening> Screenings { get; set; }
+        public DbSet<Movie> Movies { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+        }
     }
 }

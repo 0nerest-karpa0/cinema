@@ -1,30 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\asp\\abc\\",
+  "WorkspaceRootPath": "E:\\repositores\\cinema\\cinema\\abc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F2F1244E-3171-4902-8215-63F204158E54}|abc.csproj|e:\\asp\\abc\\controllers\\screeningcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2F1244E-3171-4902-8215-63F204158E54}|abc.csproj|solutionrelative:controllers\\screeningcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F2F1244E-3171-4902-8215-63F204158E54}|abc.csproj|e:\\repositores\\cinema\\cinema\\abc\\mediatr\\movie\\query\\filterscreeningquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2F1244E-3171-4902-8215-63F204158E54}|abc.csproj|solutionrelative:mediatr\\movie\\query\\filterscreeningquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2F1244E-3171-4902-8215-63F204158E54}|abc.csproj|e:\\asp\\abc\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F2F1244E-3171-4902-8215-63F204158E54}|abc.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{F2F1244E-3171-4902-8215-63F204158E54}|abc.csproj|e:\\repositores\\cinema\\cinema\\abc\\mediatr\\movie\\query\\screeningdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2F1244E-3171-4902-8215-63F204158E54}|abc.csproj|solutionrelative:mediatr\\movie\\query\\screeningdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2F1244E-3171-4902-8215-63F204158E54}|abc.csproj|e:\\asp\\abc\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2F1244E-3171-4902-8215-63F204158E54}|abc.csproj|solutionrelative:applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2F1244E-3171-4902-8215-63F204158E54}|abc.csproj|e:\\asp\\abc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2F1244E-3171-4902-8215-63F204158E54}|abc.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2F1244E-3171-4902-8215-63F204158E54}|abc.csproj|e:\\asp\\abc\\entities\\screening.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F2F1244E-3171-4902-8215-63F204158E54}|abc.csproj|e:\\repositores\\cinema\\cinema\\abc\\entities\\screening.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2F1244E-3171-4902-8215-63F204158E54}|abc.csproj|solutionrelative:entities\\screening.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2F1244E-3171-4902-8215-63F204158E54}|abc.csproj|e:\\asp\\abc\\entities\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2F1244E-3171-4902-8215-63F204158E54}|abc.csproj|solutionrelative:entities\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F2F1244E-3171-4902-8215-63F204158E54}|abc.csproj|e:\\repositores\\cinema\\cinema\\abc\\mediatr\\movie\\query\\paginatedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2F1244E-3171-4902-8215-63F204158E54}|abc.csproj|solutionrelative:mediatr\\movie\\query\\paginatedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2F1244E-3171-4902-8215-63F204158E54}|abc.csproj|e:\\repositores\\cinema\\cinema\\abc\\controllers\\screeningcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2F1244E-3171-4902-8215-63F204158E54}|abc.csproj|solutionrelative:controllers\\screeningcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2F1244E-3171-4902-8215-63F204158E54}|abc.csproj|e:\\repositores\\cinema\\cinema\\abc\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2F1244E-3171-4902-8215-63F204158E54}|abc.csproj|solutionrelative:controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2F1244E-3171-4902-8215-63F204158E54}|abc.csproj|e:\\repositores\\cinema\\cinema\\abc\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F2F1244E-3171-4902-8215-63F204158E54}|abc.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2F1244E-3171-4902-8215-63F204158E54}|abc.csproj|e:\\repositores\\cinema\\cinema\\abc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2F1244E-3171-4902-8215-63F204158E54}|abc.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,11 +66,76 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Screening.cs",
+              "DocumentMoniker": "E:\\repositores\\cinema\\cinema\\abc\\Entities\\Screening.cs",
+              "RelativeDocumentMoniker": "Entities\\Screening.cs",
+              "ToolTip": "E:\\repositores\\cinema\\cinema\\abc\\Entities\\Screening.cs",
+              "RelativeToolTip": "Entities\\Screening.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T10:49:23.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FilterScreeningQuery.cs",
+              "DocumentMoniker": "E:\\repositores\\cinema\\cinema\\abc\\MediatR\\Movie\\Query\\FilterScreeningQuery.cs",
+              "RelativeDocumentMoniker": "MediatR\\Movie\\Query\\FilterScreeningQuery.cs",
+              "ToolTip": "E:\\repositores\\cinema\\cinema\\abc\\MediatR\\Movie\\Query\\FilterScreeningQuery.cs",
+              "RelativeToolTip": "MediatR\\Movie\\Query\\FilterScreeningQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T10:30:25.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ScreeningDto.cs",
+              "DocumentMoniker": "E:\\repositores\\cinema\\cinema\\abc\\MediatR\\Movie\\Query\\ScreeningDto.cs",
+              "RelativeDocumentMoniker": "MediatR\\Movie\\Query\\ScreeningDto.cs",
+              "ToolTip": "E:\\repositores\\cinema\\cinema\\abc\\MediatR\\Movie\\Query\\ScreeningDto.cs",
+              "RelativeToolTip": "MediatR\\Movie\\Query\\ScreeningDto.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAwwCcAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T10:26:27.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "PaginatedResult.cs",
+              "DocumentMoniker": "E:\\repositores\\cinema\\cinema\\abc\\MediatR\\Movie\\Query\\PaginatedResult.cs",
+              "RelativeDocumentMoniker": "MediatR\\Movie\\Query\\PaginatedResult.cs",
+              "ToolTip": "E:\\repositores\\cinema\\cinema\\abc\\MediatR\\Movie\\Query\\PaginatedResult.cs",
+              "RelativeToolTip": "MediatR\\Movie\\Query\\PaginatedResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T10:22:20.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MovieController.cs",
+              "DocumentMoniker": "E:\\repositores\\cinema\\cinema\\abc\\Controllers\\MovieController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MovieController.cs",
+              "ToolTip": "E:\\repositores\\cinema\\cinema\\abc\\Controllers\\MovieController.cs",
+              "RelativeToolTip": "Controllers\\MovieController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAYwCwAAAB9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T05:58:05.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Program.cs",
-              "DocumentMoniker": "E:\\asp\\abc\\Program.cs",
+              "DocumentMoniker": "E:\\repositores\\cinema\\cinema\\abc\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "E:\\asp\\abc\\Program.cs",
+              "ToolTip": "E:\\repositores\\cinema\\cinema\\abc\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -71,67 +144,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "appsettings.Development.json",
-              "DocumentMoniker": "E:\\asp\\abc\\appsettings.Development.json",
+              "DocumentMoniker": "E:\\repositores\\cinema\\cinema\\abc\\appsettings.Development.json",
               "RelativeDocumentMoniker": "appsettings.Development.json",
-              "ToolTip": "E:\\asp\\abc\\appsettings.Development.json",
+              "ToolTip": "E:\\repositores\\cinema\\cinema\\abc\\appsettings.Development.json",
               "RelativeToolTip": "appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-12-06T06:22:14.247Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "ScreeningController.cs",
-              "DocumentMoniker": "E:\\asp\\abc\\Controllers\\ScreeningController.cs",
+              "DocumentMoniker": "E:\\repositores\\cinema\\cinema\\abc\\Controllers\\ScreeningController.cs",
               "RelativeDocumentMoniker": "Controllers\\ScreeningController.cs",
-              "ToolTip": "E:\\asp\\abc\\Controllers\\ScreeningController.cs",
+              "ToolTip": "E:\\repositores\\cinema\\cinema\\abc\\Controllers\\ScreeningController.cs",
               "RelativeToolTip": "Controllers\\ScreeningController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAswBcAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAQwBwAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-06T05:49:47.337Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "E:\\asp\\abc\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "ApplicationDbContext.cs",
-              "ToolTip": "E:\\asp\\abc\\ApplicationDbContext.cs",
-              "RelativeToolTip": "ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-06T05:41:59.335Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Screening.cs",
-              "DocumentMoniker": "E:\\asp\\abc\\Entities\\Screening.cs",
-              "RelativeDocumentMoniker": "Entities\\Screening.cs",
-              "ToolTip": "E:\\asp\\abc\\Entities\\Screening.cs",
-              "RelativeToolTip": "Entities\\Screening.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAgwAgAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T15:04:45.279Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Movie.cs",
-              "DocumentMoniker": "E:\\asp\\abc\\Entities\\Movie.cs",
-              "RelativeDocumentMoniker": "Entities\\Movie.cs",
-              "ToolTip": "E:\\asp\\abc\\Entities\\Movie.cs",
-              "RelativeToolTip": "Entities\\Movie.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T14:57:56.389Z",
               "EditorCaption": ""
             }
           ]

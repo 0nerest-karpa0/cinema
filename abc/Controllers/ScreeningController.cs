@@ -20,35 +20,38 @@ namespace abc.Controllers
         [HttpGet]
         public List<Screening> GetAll()
         {
-            return _context.screenings.ToList();
+            return _context.Screenings.ToList();
         }
 
         [HttpPost("add-random-data/{screeningCount:int}")]
         public ActionResult AddRandomData([FromRoute] int screeningCount)
         {
             Random rng = new Random();
+            List<Movie> allMovies = _context.Movies.ToList();
 
             List<Screening> randomData = new List<Screening>();
+            DateTime dateTime = DateTime.Now;
             for (int i = 0; i < screeningCount; i++)
             {
                 int hasSubtitles = rng.Next(0, 1);
+                dateTime.AddDays(rng.Next(0, 21));
 
                 Screening screening = new Screening
                 {
 
                     HallName = $"Hall {rng.Next(1, 10)}",
-                    ScreeningTime = DateTime.Now,
+                    ScreeningTime = $"{dateTime.Day}.{dateTime.Month}.{dateTime.Year} {dateTime.Hour}:{dateTime.Minute}:{dateTime.Second}",
                     TicketPrice = rng.Next(10, 50) + (float)rng.NextDouble(),
                     Format = _formats[rng.Next(0, _formats.Count)],
                     HasSubtitles = hasSubtitles == 1,
                     Language = _languages[rng.Next(0, _languages.Count)],
-                    MovieId = 1,
+                    MovieId = allMovies[rng.Next(0, allMovies.Count)].Id,
                 };
 
                 randomData.Add(screening);
             }
 
-            _context.screenings.AddRange(randomData);
+            _context.Screenings.AddRange(randomData);
             int entitiesChanged = _context.SaveChanges();
             return entitiesChanged == screeningCount ? Created() : StatusCode(500);
         }

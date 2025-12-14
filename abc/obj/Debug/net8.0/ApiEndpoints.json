@@ -1,5 +1,41 @@
 [
   {
+    "ContainingType": "abc.Controllers.MovieController",
+    "Method": "GetAll",
+    "RelativePath": "Movie",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[abc.Entities.Movie, abc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "abc.Controllers.MovieController",
+    "Method": "AddRandomData",
+    "RelativePath": "Movie/add-random-data/{movieCount}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "movieCount",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "abc.Controllers.ScreeningController",
     "Method": "GetAll",
     "RelativePath": "Screening",
