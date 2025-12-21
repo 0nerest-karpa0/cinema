@@ -18,6 +18,8 @@ namespace abc.Controllers
             "Curabitur sed sem mollis dolor tincidunt efficitur.","Sed at ligula malesuada, pharetra neque eget, porttitor neque.",
             "Quisque vehicula quam at nibh volutpat, et bibendum nulla mollis.", "Suspendisse imperdiet libero nec volutpat molestie."};
         private List<string> _titlesWords = new List<string> { "etiam", "eget", "elit", "elit", "nulla", "semper", "orci", "quis", "libero", "ullamcorper" };
+        private List<string> _names = new List<string> { "Liam","Noah","Oliver","Theodore", "Mohamed","Abdullah","Ahmed","Ali","Alexander","Sergei","Dmitry","Andrei" };
+        private List<string> _secondNames = new List<string> { "Smith", "Brown", "Tremblay", "Martin", "Roy", "Ivanov", "Kuznetsov", "Smirnov", "Petrov", "Wong", "Lee", "Cheung" };
 
         private ApplicationDbContext _context;
         public MovieController(ApplicationDbContext context)
@@ -43,14 +45,15 @@ namespace abc.Controllers
                 Movie movie = new Movie
                 {
                     Title = $"{_titlesWords[rng.Next(0, _titlesWords.Count)]} {_titlesWords[rng.Next(0, _titlesWords.Count)]}",
-                    Description = _descriptions[rng.Next(0,_descriptions.Count)],
+                    Description = _descriptions[rng.Next(0, _descriptions.Count)],
+                    Director = $"{_names[rng.Next(0, _names.Count)]} {_secondNames[rng.Next(0, _secondNames.Count)]}",
                     Genre = _genres[rng.Next(0, _genres.Count)],
                     Duration = rng.Next(30, 150),
                     Rating = rng.Next(1, 5),
                     AgeRestriction = _ageRestrictions[rng.Next(0, _ageRestrictions.Count)],
-                    ReleaseDate = $"{rng.Next(1,29)}.{rng.Next(1,12)}.{rng.Next(1990, 2025)}",
+                    ReleaseDate = new DateOnly(rng.Next(1990, 2025), rng.Next(1, 12), rng.Next(1, 29)),
                     PosterUrl = _postersUrl[rng.Next(0, _postersUrl.Count)],
-                    CreatedAt = $"{now.Day}.{now.Month}.{now.Year} {now.Hour}:{now.Minute}:{now.Second}"
+                    CreatedAt = now
                 };
                 randomMovies.Add(movie);
             }
@@ -59,6 +62,16 @@ namespace abc.Controllers
 
             int entitiesChanged = _context.SaveChanges();
             return entitiesChanged == movieCount ? Created() : StatusCode(500);
+        }
+
+        [HttpDelete]
+        public void RemoveAll()
+        {
+            foreach(Movie movie in _context.Movies)
+            {
+                _context.Movies.Remove(movie);
+            }
+            _context.SaveChanges();
         }
     }
 }

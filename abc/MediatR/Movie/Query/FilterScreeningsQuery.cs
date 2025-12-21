@@ -3,12 +3,12 @@ using MediatR;
 
 namespace abc.MediatR.Movie.Query
 {
-    public class FilterScreeningQuery(QueryParameters parameters) : IRequest<PaginatedResult>
+    public class FilterScreeningsQuery(QueryParameters parameters) : IRequest<PaginatedResult>
     {
         public readonly QueryParameters parameters = parameters;
     }
 
-    public class FilterBooksQueryHandler : IRequestHandler<FilterScreeningQuery, PaginatedResult>
+    public class FilterBooksQueryHandler : IRequestHandler<FilterScreeningsQuery, PaginatedResult>
     {
         private readonly ApplicationDbContext _dbContext;
         public FilterBooksQueryHandler(ApplicationDbContext dBContext)
@@ -16,14 +16,17 @@ namespace abc.MediatR.Movie.Query
             _dbContext = dBContext;
         }
 
-        public Task<PaginatedResult> Handle(FilterScreeningQuery request, CancellationToken cancellationToken)
+        public Task<PaginatedResult> Handle(FilterScreeningsQuery request, CancellationToken cancellationToken)
         {
+
             QueryParameters parameters = request.parameters;
             List<Screening> screenings = _dbContext.Screenings.Where(x =>
             x.HasSubtitles == parameters.HasSubtitles && x.TicketPrice <= parameters.MaxTicketPrice && x.TicketPrice >= parameters.MinTicketPrice &&
-                x.HallName == parameters.HallName && x.Movie.Title == parameters.MovieTitle && x.Movie.Genre == parameters.Genre &&
+                x.HallName == parameters.HallName && x.Movie.Title.StartsWith(parameters.MovieTitle) && x.Movie.Genre == parameters.Genre &&
                 x.Movie.Rating >= parameters.MinMovieRating && x.Movie.AgeRestriction <= parameters.MaxAgeRestriction &&
-                x.Format == parameters.Format && x.Language == parameters.Language).ToList().
+                x.Format == parameters.Format && x.Language == parameters.Language &&
+                x.ScreeningTime < parameters.MinScreeningTime && x.ScreeningTime > parameters.MaxScreeningTime &&
+                x.Movie.Director.StartsWith(parameters.Director) && parameters.MinAvailableSeats > x.AvailableSeats).ToList().
             GetRange(parameters.PageNumber * parameters.PageSize, parameters.PageNumber * (parameters.PageSize + 1));
 
             List<ScreeningDto> screeningDtos = new List<ScreeningDto>();
@@ -40,7 +43,7 @@ namespace abc.MediatR.Movie.Query
                 HasPreviousPage = parameters.PageNumber != 0
             };
 
-            return result;
+            return Task.FromResult(result);
         }
     }
 }

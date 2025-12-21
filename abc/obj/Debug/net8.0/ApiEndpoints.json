@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "abc.Controllers.ScreeningController",
+    "Method": "GetFilteredBooks",
+    "RelativePath": "apply-filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parameters",
+        "Type": "abc.MediatR.Movie.Query.QueryParameters",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "abc.MediatR.Movie.Query.PaginatedResult",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "abc.Controllers.MovieController",
     "Method": "GetAll",
     "RelativePath": "Movie",
@@ -15,6 +41,22 @@
           "application/json",
           "text/json"
         ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "abc.Controllers.MovieController",
+    "Method": "RemoveAll",
+    "RelativePath": "Movie",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
         "StatusCode": 200
       }
     ]

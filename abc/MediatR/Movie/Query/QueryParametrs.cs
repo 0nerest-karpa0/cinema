@@ -3,9 +3,10 @@
     public class QueryParameters
     {
         public string MovieTitle; //!
+        public string Director;
         public string Genre; //!
-        public string MinScreeningTime;
-        public string MaxScreeningTime;
+        public DateTime MinScreeningTime;
+        public DateTime MaxScreeningTime;
         public float MinTicketPrice; //!
         public float MaxTicketPrice; //!
         public string Format; //!
@@ -14,6 +15,7 @@
         public int MinMovieRating;//!
         public int MaxAgeRestriction;//!
         public string HallName;//!
+        public int MinAvailableSeats;
 
         public int PageNumber;
         public int PageSize;

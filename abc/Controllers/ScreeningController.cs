@@ -1,5 +1,7 @@
 ﻿using abc.Entities;
 using Microsoft.AspNetCore.Mvc;
+using MediatR;
+using abc.MediatR.Movie.Query;
 
 namespace abc.Controllers
 {
@@ -12,9 +14,11 @@ namespace abc.Controllers
             "French", "Bengali", "Portuguese", "Russian", "Indonesian" };
 
         private ApplicationDbContext _context;
-        public ScreeningController(ApplicationDbContext context)
+        private ISender _sender;
+        public ScreeningController(ApplicationDbContext context, ISender sender)
         {
             _context = context;
+            _sender = sender;
         }
 
         [HttpGet]
@@ -30,22 +34,23 @@ namespace abc.Controllers
             List<Movie> allMovies = _context.Movies.ToList();
 
             List<Screening> randomData = new List<Screening>();
-            DateTime dateTime = DateTime.Now;
+            DateTime now = DateTime.Now;
             for (int i = 0; i < screeningCount; i++)
             {
                 int hasSubtitles = rng.Next(0, 1);
-                dateTime.AddDays(rng.Next(0, 21));
-
+                int totalSeats = rng.Next(50, 80);
+                now.AddDays(rng.Next(0, 21));
                 Screening screening = new Screening
                 {
-
                     HallName = $"Hall {rng.Next(1, 10)}",
-                    ScreeningTime = $"{dateTime.Day}.{dateTime.Month}.{dateTime.Year} {dateTime.Hour}:{dateTime.Minute}:{dateTime.Second}",
+                    ScreeningTime = new DateTime(now.Year, now.Month, now.Day, rng.Next(0,23), rng.Next(0,59), 0),
                     TicketPrice = rng.Next(10, 50) + (float)rng.NextDouble(),
                     Format = _formats[rng.Next(0, _formats.Count)],
                     HasSubtitles = hasSubtitles == 1,
                     Language = _languages[rng.Next(0, _languages.Count)],
                     MovieId = allMovies[rng.Next(0, allMovies.Count)].Id,
+                    TotalSeats = rng.Next(50, 80),
+                    AvailableSeats = rng.Next(0, totalSeats)
                 };
 
                 randomData.Add(screening);
@@ -54,6 +59,12 @@ namespace abc.Controllers
             _context.Screenings.AddRange(randomData);
             int entitiesChanged = _context.SaveChanges();
             return entitiesChanged == screeningCount ? Created() : StatusCode(500);
+        }
+
+        [HttpGet("/apply-filter")]
+        public PaginatedResult GetFilteredBooks([FromQuery]QueryParameters parameters)
+        {
+            return _sender.Send(new FilterScreeningsQuery(parameters)).Result;
         }
     }
 }

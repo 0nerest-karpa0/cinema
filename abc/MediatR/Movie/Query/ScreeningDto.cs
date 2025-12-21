@@ -10,10 +10,10 @@ namespace abc.MediatR.Movie.Query
         public int Duration { get; set; }
         public int Rating { get; set; }
         public int AgeRestriction { get; set; }
-        public string ReleaseDate { get; set; }
+        public DateOnly ReleaseDate { get; set; }
         public string? PosterUrl { get; set; }
         public string HallName { get; set; }
-        public string ScreeningTime { get; set; }
+        public DateTime ScreeningTime { get; set; }
         public float TicketPrice { get; set; }
         public string Format { get; set; }
         public bool HasSubtitles { get; set; }

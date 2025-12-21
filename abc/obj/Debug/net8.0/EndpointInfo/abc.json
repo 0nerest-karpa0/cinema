@@ -41,6 +41,16 @@
             }
           }
         }
+      },
+      "delete": {
+        "tags": [
+          "Movie"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/Movie/add-random-data/{movieCount}": {
@@ -126,17 +136,189 @@
           }
         }
       }
+    },
+    "/apply-filter": {
+      "get": {
+        "tags": [
+          "Screening"
+        ],
+        "parameters": [
+          {
+            "name": "parameters",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/QueryParameters"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaginatedResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaginatedResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaginatedResult"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
     "schemas": {
       "Movie": {
+        "required": [
+          "ageRestriction",
+          "createdAt",
+          "description",
+          "director",
+          "duration",
+          "genre",
+          "posterUrl",
+          "rating",
+          "releaseDate",
+          "title"
+        ],
         "type": "object",
         "properties": {
           "id": {
             "type": "integer",
             "format": "int32"
           },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "genre": {
+            "type": "string",
+            "nullable": true
+          },
+          "director": {
+            "type": "string",
+            "nullable": true
+          },
+          "duration": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rating": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ageRestriction": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "releaseDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "posterUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PaginatedResult": {
+        "type": "object",
+        "properties": {
+          "screenings": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ScreeningDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "QueryParameters": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "Screening": {
+        "required": [
+          "availableSeats",
+          "format",
+          "hallName",
+          "hasSubtitles",
+          "language",
+          "movieId",
+          "screeningTime",
+          "ticketPrice",
+          "totalSeats"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "hallName": {
+            "type": "string",
+            "nullable": true
+          },
+          "screeningTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "totalSeats": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "availableSeats": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ticketPrice": {
+            "type": "number",
+            "format": "float"
+          },
+          "format": {
+            "type": "string",
+            "nullable": true
+          },
+          "hasSubtitles": {
+            "type": "boolean"
+          },
+          "language": {
+            "type": "string",
+            "nullable": true
+          },
+          "movieId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "movie": {
+            "$ref": "#/components/schemas/Movie"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ScreeningDto": {
+        "type": "object",
+        "properties": {
           "title": {
             "type": "string",
             "nullable": true
@@ -163,25 +345,11 @@
           },
           "releaseDate": {
             "type": "string",
-            "nullable": true
+            "format": "date"
           },
           "posterUrl": {
             "type": "string",
             "nullable": true
-          },
-          "createdAt": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Screening": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
           },
           "hallName": {
             "type": "string",
@@ -189,7 +357,7 @@
           },
           "screeningTime": {
             "type": "string",
-            "nullable": true
+            "format": "date-time"
           },
           "ticketPrice": {
             "type": "number",
@@ -205,10 +373,6 @@
           "language": {
             "type": "string",
             "nullable": true
-          },
-          "movieId": {
-            "type": "integer",
-            "format": "int32"
           }
         },
         "additionalProperties": false

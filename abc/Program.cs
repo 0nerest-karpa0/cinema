@@ -16,6 +16,7 @@ namespace abc
             builder.Services.AddSwaggerGen();
             string connectionString = builder.Configuration.GetConnectionString("PostgreSQL");
             builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(connectionString));
+            builder.Services.AddMediatR(x => x.RegisterServicesFromAssembly(typeof(Program).Assembly));
 
             var app = builder.Build();
 
